@@ -5,5 +5,5 @@ export {
   updateTask,
   updateTaskStatus
 } from './model/taskSlice';
-export type { Task, TaskStatus } from './model/types';
 
+export type { Task, TaskStatus } from './model/types';

@@ -1,11 +1,11 @@
-import boundaries from 'eslint-plugin-boundaries';
-import globals from 'globals';
-import importPlugin from 'eslint-plugin-import';
 import js from '@eslint/js';
+import boundaries from 'eslint-plugin-boundaries';
+import importPlugin from 'eslint-plugin-import';
 import jsdoc from 'eslint-plugin-jsdoc';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
