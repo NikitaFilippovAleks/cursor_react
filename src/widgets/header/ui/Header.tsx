@@ -1,9 +1,10 @@
 import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-import { useAppDispatch, useAppSelector } from '@/shared/lib/store';
 import { clearUser } from '@/entities/user';
-import { Button as SharedButton } from '@/shared/ui/components';
+
+import { useAppDispatch, useAppSelector } from '@/shared/lib/store';
+import { ButtonsMain } from '@/shared/ui/components/buttons/Main';
 
 /**
  * Шапка приложения
@@ -41,14 +42,14 @@ export const Header = () => {
           <Typography variant='body2' sx={{ mr: 1 }}>
             {currentUser.name}
           </Typography>
-          <SharedButton
+          <ButtonsMain
             variant='outlined'
             color='inherit'
             onClick={handleLogout}
             size='small'
           >
             Выйти
-          </SharedButton>
+          </ButtonsMain>
         </Box>
       </Toolbar>
     </AppBar>

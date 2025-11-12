@@ -2,7 +2,7 @@ import { Box, Container, Typography } from '@mui/material';
 import { useMemo, useState } from 'react';
 import AddIcon from '@mui/icons-material/Add';
 
-import { Button } from '@/shared/ui/components';
+import { ButtonsMain } from '@/shared/ui/components/buttons/Main';
 import { CreateTaskForm } from '@/features/task-create';
 import { FilterPanel } from '@/widgets/filter-panel';
 import type { Task } from '@/entities/task';
@@ -51,13 +51,13 @@ export const TasksPage = () => {
         <Typography variant='h4' component='h1'>
           Мои задачи
         </Typography>
-        <Button
+        <ButtonsMain
           variant='contained'
           startIcon={<AddIcon />}
           onClick={() => setIsCreateModalOpen(true)}
         >
           Создать задачу
-        </Button>
+        </ButtonsMain>
       </Box>
 
       <FilterPanel

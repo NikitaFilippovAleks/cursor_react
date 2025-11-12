@@ -2,8 +2,9 @@ import { Box, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-import { Button, Input } from '@/shared/ui/components';
 import { isValidEmail, isValidPassword } from '@/shared/lib';
+import { ButtonsMain } from '@/shared/ui/components/buttons/Main';
+import { InputsMain } from '@/shared/ui/components/inputs/Main';
 import { setUser } from '@/entities/user';
 import { useAppDispatch } from '@/shared/lib/store';
 import type { User } from '@/entities/user';
@@ -77,7 +78,7 @@ export const AuthForm = () => {
         sx={{ width: '100%', mt: 2 }}
       >
         {!isLogin && (
-          <Input
+          <InputsMain
             fullWidth
             label='Имя'
             value={name}
@@ -89,7 +90,7 @@ export const AuthForm = () => {
           />
         )}
 
-        <Input
+        <InputsMain
           fullWidth
           type='email'
           label='Email'
@@ -101,7 +102,7 @@ export const AuthForm = () => {
           required
         />
 
-        <Input
+        <InputsMain
           fullWidth
           type='password'
           label='Пароль'
@@ -119,11 +120,11 @@ export const AuthForm = () => {
           </Typography>
         )}
 
-        <Button type='submit' variant='contained' fullWidth sx={{ mt: 2 }}>
+        <ButtonsMain type='submit' variant='contained' fullWidth sx={{ mt: 2 }}>
           {isLogin ? 'Войти' : 'Зарегистрироваться'}
-        </Button>
+        </ButtonsMain>
 
-        <Button
+        <ButtonsMain
           type='button'
           variant='text'
           fullWidth
@@ -136,7 +137,7 @@ export const AuthForm = () => {
           {isLogin
             ? 'Нет аккаунта? Зарегистрироваться'
             : 'Уже есть аккаунт? Войти'}
-        </Button>
+        </ButtonsMain>
       </Box>
     </Box>
   );

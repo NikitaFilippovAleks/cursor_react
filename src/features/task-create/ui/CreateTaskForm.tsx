@@ -1,10 +1,12 @@
 import { Box, DialogContent, DialogTitle, MenuItem } from '@mui/material';
 import { useState } from 'react';
 
-import { Button, Input, Modal } from '@/shared/ui/components';
 import { useAppDispatch, useAppSelector } from '@/shared/lib/store';
 import { addTask } from '@/entities/task';
+import { ButtonsMain } from '@/shared/ui/components/buttons/Main';
+import { InputsMain } from '@/shared/ui/components/inputs/Main';
 import { isNotEmpty } from '@/shared/lib';
+import { ModalsMain } from '@/shared/ui/components/modals/Main';
 import type { Task } from '@/entities/task';
 
 interface CreateTaskFormProps {
@@ -65,11 +67,11 @@ export const CreateTaskForm = ({ open, onClose }: CreateTaskFormProps) => {
   };
 
   return (
-    <Modal open={open} onClose={onClose}>
+    <ModalsMain open={open} onClose={onClose}>
       <DialogTitle>Создать задачу</DialogTitle>
       <DialogContent>
         <Box component='form' onSubmit={handleSubmit} sx={{ mt: 1 }}>
-          <Input
+          <InputsMain
             fullWidth
             label='Название'
             value={title}
@@ -80,7 +82,7 @@ export const CreateTaskForm = ({ open, onClose }: CreateTaskFormProps) => {
             required
           />
 
-          <Input
+          <InputsMain
             fullWidth
             label='Описание'
             value={description}
@@ -92,7 +94,7 @@ export const CreateTaskForm = ({ open, onClose }: CreateTaskFormProps) => {
             rows={3}
           />
 
-          <Input
+          <InputsMain
             fullWidth
             select
             label='Категория'
@@ -108,22 +110,22 @@ export const CreateTaskForm = ({ open, onClose }: CreateTaskFormProps) => {
                 {category.name}
               </MenuItem>
             ))}
-          </Input>
+          </InputsMain>
 
           {error && <Box sx={{ mt: 1, color: 'error.main' }}>{error}</Box>}
 
           <Box
             sx={{ display: 'flex', gap: 1, mt: 2, justifyContent: 'flex-end' }}
           >
-            <Button variant='outlined' onClick={onClose}>
+            <ButtonsMain variant='outlined' onClick={onClose}>
               Отмена
-            </Button>
-            <Button type='submit' variant='contained'>
+            </ButtonsMain>
+            <ButtonsMain type='submit' variant='contained'>
               Создать
-            </Button>
+            </ButtonsMain>
           </Box>
         </Box>
       </DialogContent>
-    </Modal>
+    </ModalsMain>
   );
 };

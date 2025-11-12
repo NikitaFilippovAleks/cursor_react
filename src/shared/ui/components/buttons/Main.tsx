@@ -12,6 +12,6 @@ interface ButtonProps extends MuiButtonProps {
  * @param root0 - пропсы
  * @param root0.children - дочерние элементы кнопки
  */
-export const ComponentsButton = ({ children, ...props }: ButtonProps) => {
+export const ButtonsMain = ({ children, ...props }: ButtonProps) => {
   return <MuiButton {...props}>{children}</MuiButton>;
 };

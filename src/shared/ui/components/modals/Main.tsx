@@ -13,7 +13,7 @@ interface ModalProps extends Omit<DialogProps, 'open'> {
  * @param root0.onClose - закрытие модального окна
  * @param root0.children - дочерние элементы модального окна
  */
-export const ComponentsModal = ({
+export const ModalsMain = ({
   open,
   onClose,
   children,

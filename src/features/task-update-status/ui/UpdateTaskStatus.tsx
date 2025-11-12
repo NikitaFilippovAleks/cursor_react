@@ -1,6 +1,6 @@
 import { MenuItem } from '@mui/material';
 
-import { Input } from '@/shared/ui/components';
+import { InputsMain } from '@/shared/ui/components/inputs/Main';
 import type { TaskStatus } from '@/entities/task';
 import { updateTaskStatus } from '@/entities/task';
 import { useAppDispatch } from '@/shared/lib/store';
@@ -38,7 +38,7 @@ export const UpdateTaskStatus = ({
   };
 
   return (
-    <Input
+    <InputsMain
       select
       size='small'
       value={currentStatus}
@@ -50,6 +50,6 @@ export const UpdateTaskStatus = ({
           {label}
         </MenuItem>
       ))}
-    </Input>
+    </InputsMain>
   );
 };

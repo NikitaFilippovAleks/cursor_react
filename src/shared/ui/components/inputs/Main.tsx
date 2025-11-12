@@ -9,9 +9,6 @@ interface InputProps extends Omit<TextFieldProps, 'variant'> {
  * @param root0 - пропсы
  * @param root0.variant - вариант ввода
  */
-export const ComponentsInput = ({
-  variant = 'outlined',
-  ...props
-}: InputProps) => {
+export const InputsMain = ({ variant = 'outlined', ...props }: InputProps) => {
   return <TextField variant={variant} {...props} />;
 };
