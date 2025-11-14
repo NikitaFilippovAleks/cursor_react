@@ -1,6 +1,5 @@
 ---
 description: Основные правила и архитектура сервиса
-globs:
 alwaysApply: true
 ---
 
